@@ -42,12 +42,16 @@ namespace Core.Application.Services
                 throw new InvalidOperationException("User not found");
             }
 
+            var transactionDate = request.Date.HasValue
+                ? DateTime.SpecifyKind(request.Date.Value.Date, DateTimeKind.Utc)
+                : DateTime.UtcNow;
+
             var transaction = new Transaction(
                 userId,
                 request.Amount,
                 request.Type,
                 request.Category,
-                DateTime.UtcNow,
+                transactionDate,
                 request.Source,
                 request.Description
             );
