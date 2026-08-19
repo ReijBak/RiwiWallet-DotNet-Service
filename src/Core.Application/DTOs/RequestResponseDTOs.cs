@@ -55,6 +55,8 @@ namespace Core.Application.DTOs
         
         [StringLength(500)]
         public string Description { get; set; }
+
+        public DateTime? Date { get; set; }
         
         [Required]
         public TransactionSource Source { get; set; }
