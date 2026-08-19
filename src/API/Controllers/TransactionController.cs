@@ -60,6 +60,7 @@ namespace API.Controllers
                     category = transaction.Category,
                     description = transaction.Description,
                     source = transaction.Source.ToString(),
+                    date = transaction.Date,
                     createdAt = transaction.CreatedAt
                 });
             }
@@ -112,6 +113,7 @@ namespace API.Controllers
                     category = t.Category,
                     description = t.Description,
                     source = t.Source.ToString(),
+                    date = t.Date,
                     createdAt = t.CreatedAt
                 });
                 
@@ -209,6 +211,7 @@ namespace API.Controllers
                         amount = t.Amount,
                         category = t.Category,
                         description = t.Description,
+                        date = t.Date,
                         createdAt = t.CreatedAt
                     }),
                     totalAmount = total,
@@ -253,6 +256,7 @@ namespace API.Controllers
                         amount = t.Amount,
                         category = t.Category,
                         description = t.Description,
+                        date = t.Date,
                         createdAt = t.CreatedAt
                     }),
                     totalAmount = total,
@@ -327,6 +331,7 @@ namespace API.Controllers
                         category = t.Category,
                         description = t.Description,
                         source = t.Source.ToString(),
+                        date = t.Date,
                         createdAt = t.CreatedAt
                     }),
                     count = transactionList.Count,
